@@ -1,0 +1,40 @@
+.custom-select {
+  position: relative;
+  width: 300px;
+}
+.select-wrapper {
+  border: 1px solid #ccc;
+  padding: 10px;
+  cursor: pointer;
+}
+.dropdown {
+  position: absolute;
+  border: 1px solid #cccccc;
+  background-color: white;
+  width: 100%;
+  left: 0px;
+  top: 110%;
+  overflow-y: auto;
+  display: none;
+}
+.dropdown.open {
+  display: block;
+}
+.option {
+  padding: 10px;
+  cursor: pointer;
+  transition: var(--tran-02);
+}
+.option.selected {
+  background-color: var(--primary-hover-clr);
+  color: var(--text2-clr);
+}
+.option:hover {
+  background-color: var(--primary-hover-clr);
+  color: var(--text2-clr);
+}
+
+.select-label {
+  display: block;
+  margin-bottom: 10px;
+}

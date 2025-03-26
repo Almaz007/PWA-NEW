@@ -1,0 +1,35 @@
+@import url("reset.css");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+    /* ===== clrs ===== */
+    --background-clr: #ffffff;
+    --sidebar-clr: #fff;
+    --sidebar-text--clr: #707070;
+    --text1-clr: #010101;
+    --text2-clr: #fff;
+    --border-shadow-clr: #545454;
+    --primary-clr: #1156d6;
+    --primary-hover-clr: #4a8fdd;
+
+    --bool-clr: #00ff00;
+
+    --float-clr: #cc0c0c;
+    --int-clr: #368ff4;
+
+    /* ====== Transition ====== */
+    --tran-02: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.4s ease;
+    --tran-05: all 0.5s ease;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.container {
+    max-width: 1480px;
+    padding: 0px 20px;
+    margin: 0 auto;
+}

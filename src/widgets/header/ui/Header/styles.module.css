@@ -1,0 +1,29 @@
+.header-row {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  margin-bottom: 30px;
+}
+.logo {
+  width: 80px;
+}
+.text {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.title {
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--primary-clr);
+}
+.header-message {
+  font-size: 20px;
+
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
