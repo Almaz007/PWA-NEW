@@ -1,0 +1,9 @@
+.logic {
+    border: 1px solid black;
+    background-color: #fff;
+    border-radius: 10px;
+}
+.text {
+    margin-top: 15px;
+    text-align: center;
+}

@@ -1,0 +1,10 @@
+.elements {
+    display: grid;
+    grid-template-columns: repeat(
+        2,
+        max-content
+    ); /* Ровно 2 столбца, ширина каждого зависит от содержимого */
+    gap: 20px; /* Расстояние между элементами */
+    justify-content: start; /* Ряды начинаются от начала */
+    align-items: center;
+}

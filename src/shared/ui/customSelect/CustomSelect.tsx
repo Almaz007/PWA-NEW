@@ -18,7 +18,7 @@ const CustomSelect: React.FC<CustomSelectProps> = ({
 
     const handleOptionClick = (
         event: React.MouseEvent<HTMLDivElement>,
-        option: string
+        option: string | number
     ) => {
         event.stopPropagation();
         onChange(option);

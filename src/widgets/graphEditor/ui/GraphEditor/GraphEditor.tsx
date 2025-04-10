@@ -3,29 +3,23 @@ import {
     ReactFlowProvider,
     Background,
     Controls,
-    ConnectionLineType,
     Panel,
 } from "@xyflow/react";
 import "@xyflow/react/dist/style.css";
 import { shallow } from "zustand/shallow";
 
-import {
-    ConnectionLine,
-    editorSelector,
-    useEditorStore,
-} from "@/entities/editor";
+import { editorSelector, useEditorStore } from "@/entities/editor";
 import styles from "./styles.module.css";
-import {
-    defaultEdgeOptions,
-    edgeTypes,
-    nodeTypes,
-    proOptions,
-} from "../../constants/constants";
+import { edgeTypes, nodeTypes, proOptions } from "../../config/constants";
+import { ConnectionLine } from "@/features/connectionLine";
 import { useDnd } from "@/features/dnd";
+import { LibNodes } from "@/features/libNodes";
+// import { ElementsPanel } from "@/features/nodes";
 
 const GraphEditorContent = () => {
     const { nodes, edges, onNodesChange, onEdgesChange, addEdge } =
         useEditorStore(editorSelector, shallow);
+
     const { onDragOver, onDrop } = useDnd();
 
     return (
@@ -39,15 +33,13 @@ const GraphEditorContent = () => {
                 onNodesChange={onNodesChange}
                 onEdgesChange={onEdgesChange}
                 onConnect={addEdge}
-                // defaultEdgeOptions={defaultEdgeOptions}
-                connectionLineType={ConnectionLineType.SmoothStep}
                 onDragOver={onDragOver}
                 onDrop={onDrop}
                 connectionLineComponent={ConnectionLine}
                 fitView
             >
-                <Panel>
-                    <div></div>
+                <Panel position="top-center">
+                    <LibNodes />
                 </Panel>
                 <Background />
                 <Controls />

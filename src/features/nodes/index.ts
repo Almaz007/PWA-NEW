@@ -1,3 +1,3 @@
-import { Shape } from "./ui/shape/Shape";
+import { NodeComponent } from "./ui/NodeComponent/NodeComponent";
 
-export { Shape };
+export { NodeComponent };
