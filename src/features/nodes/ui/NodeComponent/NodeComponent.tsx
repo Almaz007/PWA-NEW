@@ -4,7 +4,7 @@ import { NodeBuisnessLogics } from "../Node-types";
 
 type Props = NodeProps<Node<TNodeData>>;
 
-export const NodeComponent = ({ data }: Props) => {
+export const NodeComponent = ({ id, data }: Props) => {
     const { type } = data;
 
     const NodeComponent = NodeBuisnessLogics[type];
@@ -13,5 +13,5 @@ export const NodeComponent = ({ data }: Props) => {
         return null;
     }
 
-    return <NodeComponent data={data} />;
+    return <NodeComponent id={id} data={data} />;
 };

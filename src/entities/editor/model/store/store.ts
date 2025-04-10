@@ -11,7 +11,8 @@ export const useEditorStore = createWithEqualityFn<EditorState>((set, get) => ({
             data: {
                 dataType: "bool",
                 type: "discreteInput",
-                handlesCount: 0,
+                inputHandlesCount: 2,
+                outputHandlesCount: 1,
                 name: "test",
             },
         },
@@ -22,7 +23,8 @@ export const useEditorStore = createWithEqualityFn<EditorState>((set, get) => ({
             data: {
                 dataType: "bool",
                 type: "discreteOutput",
-                handlesCount: 0,
+                inputHandlesCount: 0,
+                outputHandlesCount: 1,
                 name: "test",
             },
         },
@@ -33,7 +35,8 @@ export const useEditorStore = createWithEqualityFn<EditorState>((set, get) => ({
             data: {
                 dataType: "float",
                 type: "analogInput",
-                handlesCount: 0,
+                inputHandlesCount: 0,
+                outputHandlesCount: 1,
                 name: "test",
             },
         },
@@ -44,7 +47,8 @@ export const useEditorStore = createWithEqualityFn<EditorState>((set, get) => ({
             data: {
                 dataType: "float",
                 type: "analogOutput",
-                handlesCount: 1,
+                inputHandlesCount: 1,
+                outputHandlesCount: 1,
                 name: "test",
             },
         },
@@ -55,7 +59,8 @@ export const useEditorStore = createWithEqualityFn<EditorState>((set, get) => ({
             data: {
                 dataType: "bool",
                 type: "and",
-                handlesCount: 2,
+                inputHandlesCount: 2,
+                outputHandlesCount: 1,
                 name: "test",
             },
         },
@@ -66,7 +71,8 @@ export const useEditorStore = createWithEqualityFn<EditorState>((set, get) => ({
             data: {
                 dataType: "bool",
                 type: "or",
-                handlesCount: 2,
+                inputHandlesCount: 2,
+                outputHandlesCount: 1,
                 name: "test",
             },
         },
@@ -77,7 +83,8 @@ export const useEditorStore = createWithEqualityFn<EditorState>((set, get) => ({
             data: {
                 dataType: "bool",
                 type: "xor",
-                handlesCount: 2,
+                inputHandlesCount: 2,
+                outputHandlesCount: 1,
                 name: "test",
             },
         },
@@ -88,7 +95,8 @@ export const useEditorStore = createWithEqualityFn<EditorState>((set, get) => ({
             data: {
                 dataType: "int",
                 type: "equalsInt",
-                handlesCount: 2,
+                inputHandlesCount: 2,
+                outputHandlesCount: 1,
                 name: "test",
             },
         },

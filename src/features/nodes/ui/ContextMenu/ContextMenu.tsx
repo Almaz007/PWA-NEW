@@ -24,10 +24,18 @@ export const ContextMenu = ({ actions }) => {
     return (
         <div
             ref={menuRef}
-            style={{ position: "absolute", top: "-100%", left: "0px" }}
+            style={{
+                position: "absolute",
+                top: "-100%",
+                left: "0px",
+                background: "#fff",
+                width: "200px",
+                transform: "translateX(-50%)",
+                border: "1px solid #000",
+            }}
         >
-            {actions.map((action) => (
-                <div>{action.element}</div>
+            {actions.map((action, index) => (
+                <div key={index}>{action.element}</div>
             ))}
         </div>
     );

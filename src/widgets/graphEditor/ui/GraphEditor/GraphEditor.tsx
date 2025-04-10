@@ -19,7 +19,7 @@ import { LibNodes } from "@/features/libNodes";
 const GraphEditorContent = () => {
     const { nodes, edges, onNodesChange, onEdgesChange, addEdge } =
         useEditorStore(editorSelector, shallow);
-
+    console.log(nodes);
     const { onDragOver, onDrop } = useDnd();
 
     return (

@@ -47,7 +47,7 @@ const CustomSelect: React.FC<CustomSelectProps> = ({
                                 handleOptionClick(event, option.value)
                             }
                         >
-                            {option.label}
+                            {option.value}
                         </div>
                     ))}
                 </div>

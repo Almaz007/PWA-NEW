@@ -1,7 +1,7 @@
 // features/nodes/lib/apply-features.tsx
 
 import { ReactNode } from "react";
-import { ContextMenuFeature } from "./ContextMenuFeature";
+import { ContextMenuFeature } from "../../ui/ContextMenuFeatrue/ContextMenuFeature";
 // import { DynamicInputsFeature, ContextMenuFeature } from "./node-features";
 
 const featureMap = {

@@ -20,7 +20,7 @@ interface Props {
 
 export const BasedNodeLogic = ({ id, data }: Props) => {
     const { inputHandlesCount, outputHandlesCount, type, dataType } = data;
-
+    console.log(inputHandlesCount);
     const viewInfo = NodeViews[type];
 
     if (!viewInfo) {

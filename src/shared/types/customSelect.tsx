@@ -1,6 +1,6 @@
 export interface Option {
     value: string | number;
-    label: string;
+    label?: string;
 }
 
 export interface CustomSelectProps {

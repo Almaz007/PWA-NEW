@@ -18,6 +18,7 @@ export const useNodeContextMenu = (nodeId: string, data: TNodeData) => {
     const { changeHandlesCount, items } = useHandleData(nodeId);
     const { type } = data;
 
+    console.log(items);
     const getCommonActions = useMemo(() => {
         const baseActions: MenuAction[] = [
             {
@@ -50,6 +51,7 @@ export const useNodeContextMenu = (nodeId: string, data: TNodeData) => {
                     label: "Изменить входы",
                     element: (
                         <CustomSelect
+                            placeholder="кол-во входов"
                             value={data.inputHandlesCount}
                             options={items}
                             onChange={changeHandlesCount}
