@@ -1,11 +1,11 @@
-import { TViewComponents } from "@/entities/editor/model/types/types";
+import { TViewConfig } from "@/entities/editor/model/types/connection";
 import { LogicViewStructure } from "./LogicViewStructure/LogicViewStructure";
 
-export const logicViews: TViewComponents = {
+export const logicViews: TViewConfig = {
     and: {
         view: LogicViewStructure,
         width: 100,
-        height: 100,
+        height: 120,
         text: "&",
         name: "Логическая и",
     },
@@ -13,7 +13,7 @@ export const logicViews: TViewComponents = {
     xor: {
         view: LogicViewStructure,
         width: 100,
-        height: 100,
+        height: 120,
         text: "=1",
         name: "Исключающее или",
     },
@@ -21,8 +21,24 @@ export const logicViews: TViewComponents = {
     or: {
         view: LogicViewStructure,
         width: 100,
-        height: 100,
+        height: 120,
         text: "1",
         name: "Логическая или",
+    },
+    nand: {
+        view: LogicViewStructure,
+        width: 100,
+        height: 120,
+        text: "&",
+        name: "Инверсия лог-й и",
+        inverse: true,
+    },
+    nor: {
+        view: LogicViewStructure,
+        width: 100,
+        height: 120,
+        text: "1",
+        name: "Инверсия лог-й или",
+        inverse: true,
     },
 };

@@ -1,4 +1,4 @@
-import { TViewComponents } from "@/entities/editor/model/types/types";
+import { TViewComponents } from "@/entities/editor/model/types/connection";
 import { СomparisonViewStructure } from "./СomparisonViewStructure/СomparisonViewStructure";
 
 export const comparisonsViews: TViewComponents = {

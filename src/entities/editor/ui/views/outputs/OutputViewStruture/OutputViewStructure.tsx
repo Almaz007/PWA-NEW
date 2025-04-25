@@ -1,5 +1,5 @@
 import styles from "./styles.module.css";
-import { TViewProps } from "../../../../model/types/types";
+import { TViewProps } from "../../../../model/types/connection";
 
 export const OutputViewStructure = ({
     width,

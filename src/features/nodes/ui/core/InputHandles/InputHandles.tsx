@@ -3,7 +3,7 @@ import { CustomHandle } from "../CustomHandle/CustomHandle";
 import styles from "./styles.module.css";
 import { TDataType } from "@/entities/editor";
 import { useMemo } from "react";
-import { generateHandles } from "@/features/nodes/utils/helpers/genereteHandles";
+import { generateHandles } from "@/features/nodes/lib/utils/genereteHandles";
 
 interface Props {
     dataType: TDataType;
@@ -14,6 +14,7 @@ export const InputHandles = ({ dataType, inputHandlesCount }: Props) => {
     const inputhHandlesValues = useMemo(() => {
         return generateHandles(inputHandlesCount);
     }, [inputHandlesCount]);
+
     return (
         <div className={styles["handles-column"]}>
             {Object.keys(inputhHandlesValues).map((key) => (

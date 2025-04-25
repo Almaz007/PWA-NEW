@@ -1,8 +1,8 @@
 export const DiscreteInputIcon = () => {
     return (
         <svg
-            width="44"
-            height="26"
+            width="38"
+            height="24"
             viewBox="0 0 44 26"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"

@@ -1,5 +1,5 @@
 import styles from "./styles.module.css";
-import { TViewProps } from "@/entities/editor/model/types/types";
+import { TViewProps } from "@/entities/editor/model/types/connection";
 
 export const InputViewStructure = ({
     width,
@@ -12,7 +12,7 @@ export const InputViewStructure = ({
             className={styles["input"]}
             style={{ width: width, height: height }}
         >
-            <div className={styles["img"]}>{icon}</div>
+            {icon && <div className={styles["img"]}>{icon}</div>}
             <div className={styles["text"]}>{text}</div>
         </div>
     );

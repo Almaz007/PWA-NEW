@@ -3,9 +3,9 @@ import { useCallback } from "react";
 import { shallow } from "zustand/shallow";
 import { DragEvent } from "react";
 
-import { generateNode } from "@/entities/editor";
 import { useEditorStore } from "@/entities/editor";
 import { TNodeInstructionsTypes } from "@/entities/editor";
+import { generateNode } from "../helpers/generateNode";
 
 export const useDnd = () => {
     const addNode = useEditorStore((state) => state.addNode, shallow);
@@ -26,6 +26,7 @@ export const useDnd = () => {
         });
         console.log(type);
         const newNode = generateNode(type as TNodeInstructionsTypes, position);
+        if (!newNode) return;
         addNode(newNode);
     };
 

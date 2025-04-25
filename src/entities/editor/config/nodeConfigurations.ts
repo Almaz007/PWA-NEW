@@ -1,71 +1,93 @@
-import { TNodeConfigurations } from "../model/types/types";
+import { TNodeConfigurations } from "../model/types/node-config";
 
 export const nodeConfigurations: TNodeConfigurations = {
     discreteInput: {
-        dataType: "int",
+        dataType: "bool",
         type: "discreteInput",
         inputHandlesCount: 0,
+        resultOffset: null,
+        outputHandlesCount: 1,
         name: "",
     },
     discreteOutput: {
-        dataType: "int",
+        dataType: "bool",
         type: "discreteOutput",
-        inputHandlesCount: 1,
+        inputHandlesCount: 0,
+        resultOffset: null,
+        outputHandlesCount: 1,
         name: "",
     },
-
     analogInput: {
         dataType: "float",
         type: "analogInput",
         inputHandlesCount: 0,
+        setpointOffset: null,
+        outputHandlesCount: 1,
         name: "",
     },
     analogOutput: {
         dataType: "float",
         type: "analogOutput",
-        inputHandlesCount: 1,
+        inputHandlesCount: 0,
+        resultOffset: null,
+        outputHandlesCount: 1,
         name: "",
     },
     xor: {
         dataType: "bool",
         type: "xor",
         inputHandlesCount: 2,
+        resultOffset: null,
         outputHandlesCount: 1,
     },
     and: {
         dataType: "bool",
         type: "and",
         inputHandlesCount: 2,
+        resultOffset: null,
+        outputHandlesCount: 1,
     },
     or: {
         dataType: "bool",
         type: "or",
         inputHandlesCount: 3,
+        resultOffset: null,
+        outputHandlesCount: 1,
     },
     nand: {
         dataType: "bool",
         type: "nand",
         inputHandlesCount: 3,
+        resultOffset: null,
+        outputHandlesCount: 1,
     },
     nor: {
         dataType: "bool",
         type: "nor",
         inputHandlesCount: 3,
+        resultOffset: null,
+        outputHandlesCount: 1,
     },
     notOperation: {
         dataType: "bool",
         type: "notOperation",
         inputHandlesCount: 1,
+        resultOffset: null,
+        outputHandlesCount: 1,
     },
     sumInt: {
         dataType: "int",
         type: "sumInt",
         inputHandlesCount: 2,
+        resultOffset: null,
+        outputHandlesCount: 1,
     },
     // sumFloat: {
     //     dataType: "float",
     // type:,
     // inputHandlesCount: 2,
+    //oresultOffset:null
+    // utputHandlesCount: 1,
     //     width: 0,
     //     height: 0,
     // },
@@ -73,11 +95,15 @@ export const nodeConfigurations: TNodeConfigurations = {
         dataType: "int",
         type: "multInt",
         inputHandlesCount: 2,
+        resultOffset: null,
+        outputHandlesCount: 1,
     },
     // multFloat: {
     //     dataType: "float",
     // type:,
     // inputHandlesCount: 2,
+    //oresultOffset:null
+    // utputHandlesCount: 1,
     //     width: 0,
     //     height: 0,
     // },
@@ -85,11 +111,15 @@ export const nodeConfigurations: TNodeConfigurations = {
         dataType: "int",
         type: "subInt",
         inputHandlesCount: 2,
+        resultOffset: null,
+        outputHandlesCount: 1,
     },
     // subFloat: {
     //     dataType: "float",
     // type:,
     // inputHandlesCount: 2,
+    //oresultOffset:null
+    // utputHandlesCount: 1,
     //     width: 0,
     //     height: 0,
     // },
@@ -100,6 +130,8 @@ export const nodeConfigurations: TNodeConfigurations = {
     //     dataType: "int",
     // type:,
     // inputHandlesCount: 0,
+    //oresultOffset:null
+    // utputHandlesCount: 1,
     // },
     // outputBool: {
     //     name: "",
@@ -108,6 +140,8 @@ export const nodeConfigurations: TNodeConfigurations = {
     //     dataType: "bool",
     // type:,
     // inputHandlesCount: 0,
+    // resultOffset:null
+    // outputHandlesCount: 1,
     // },
     // outputFloat: {
     //     name: "",
@@ -116,11 +150,15 @@ export const nodeConfigurations: TNodeConfigurations = {
     //     dataType: "float",
     // type:,
     // inputHandlesCount: 0,
+    // resultOffset:null
+    // outputHandlesCount: 1,
     // },
     // muxBool: {
     //     dataType: "bool",
     // type:,
     // inputHandlesCount: 3,
+    // resultOffset:null
+    // outputHandlesCount: 1,
     //     width: 0,
     //     height: 0,
     // },
@@ -128,6 +166,8 @@ export const nodeConfigurations: TNodeConfigurations = {
     //     dataType: "int",
     // type:,
     // inputHandlesCount: 3,
+    // resultOffset:null
+    // outputHandlesCount: 1,
     //     width: 0,
     //     height: 0,
     // },
@@ -135,11 +175,15 @@ export const nodeConfigurations: TNodeConfigurations = {
         dataType: "int",
         type: "equalsInt",
         inputHandlesCount: 2,
+        resultOffset: null,
+        outputHandlesCount: 1,
     },
     // equalsFloat: {
     //     dataType: "float",
     // type:,
     // inputHandlesCount: 2,
+    // resultOffset:null
+    // outputHandlesCount: 1,
     //     width: 0,
     //     height: 0,
     // },
@@ -147,11 +191,15 @@ export const nodeConfigurations: TNodeConfigurations = {
         dataType: "int",
         type: "lessInt",
         inputHandlesCount: 2,
+        resultOffset: null,
+        outputHandlesCount: 1,
     },
     // lessFloat: {
     //     dataType: "float",
     // type:,
     // inputHandlesCount: 2,
+    // resultOffset:null
+    // outputHandlesCount: 1,
     //     width: 0,
     //     height: 0,
     // },
@@ -159,11 +207,15 @@ export const nodeConfigurations: TNodeConfigurations = {
         dataType: "int",
         type: "moreInt",
         inputHandlesCount: 2,
+        resultOffset: null,
+        outputHandlesCount: 1,
     },
     // moreFloat: {
     //     dataType: "float",
     // type:,
     // inputHandlesCount: 2,
+    // resultOffset:null
+    // outputHandlesCount: 1,
     //     width: 0,
     //     height: 0,
     // },
@@ -172,13 +224,16 @@ export const nodeConfigurations: TNodeConfigurations = {
         type: "timerInt",
         name: "t",
         inputHandlesCount: 0,
+        resultOffset: null,
+        outputHandlesCount: 1,
     },
-    сonstInt: {
+    constInt: {
         dataType: "int",
-        type: "сonstInt",
+        type: "constInt",
         name: "c",
-
+        setpointOffset: null,
         inputHandlesCount: 0,
+        outputHandlesCount: 1,
     },
     constBoolean: {
         dataType: "bool",
@@ -186,11 +241,15 @@ export const nodeConfigurations: TNodeConfigurations = {
         name: "c",
 
         inputHandlesCount: 0,
+        resultOffset: null,
+        outputHandlesCount: 1,
     },
     dtrigger: {
         dataType: "bool",
         type: "dtrigger",
 
         inputHandlesCount: 1,
+        resultOffset: null,
+        outputHandlesCount: 1,
     },
 };

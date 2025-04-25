@@ -1,6 +1,6 @@
 import { ConnectionLineType, EdgeTypes, NodeTypes } from "@xyflow/react";
 import { CustomEdge } from "@/features/customEdge";
-import { NodeComponent } from "@/features/nodes";
+import { BasedNodeLogic } from "@/features/nodes";
 
 export const proOptions = { account: "paid-pro", hideAttribution: true };
 
@@ -10,7 +10,7 @@ export const defaultEdgeOptions = {
 };
 
 export const nodeTypes = {
-    node: NodeComponent,
+    node: BasedNodeLogic,
 };
 
 export const edgeTypes: EdgeTypes = {

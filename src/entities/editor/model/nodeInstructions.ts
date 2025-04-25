@@ -1673,7 +1673,7 @@ export const nodeInstructions = {
     //     },
     //   },
     // },
-    сonstInt: {
+    constInt: {
         0: {
             instruction: [
                 "0x22",

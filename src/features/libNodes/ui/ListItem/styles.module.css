@@ -20,6 +20,8 @@
 }
 .name {
     font-size: 15px;
+    width: 200px;
+    text-align: center;
     font-weight: 500;
     color: #4f4f4f;
 }

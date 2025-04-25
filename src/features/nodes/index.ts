@@ -1,3 +1,4 @@
-import { NodeComponent } from "./ui/NodeComponent/NodeComponent";
+import useCopyPaste from "./model/hooks/useCopyPaste";
+import { BasedNodeLogic } from "./ui/core/BasedNodeLogic/BasedNodeLogic";
 
-export { NodeComponent };
+export { BasedNodeLogic, useCopyPaste };

@@ -1,10 +1,16 @@
-import { TViewProps } from "@/entities/editor/model/types/types";
+import { TViewProps } from "@/entities/editor/model/types/connection";
 import styles from "./styles.module.css";
+import cn from "classnames";
 
-export const LogicViewStructure = ({ width, height, text }: TViewProps) => {
+export const LogicViewStructure = ({
+    width,
+    height,
+    inverse,
+    text,
+}: TViewProps) => {
     return (
         <div
-            className={styles["logic"]}
+            className={cn(styles["logic"], { [styles["inverse"]]: inverse })}
             style={{ width: width, height: height }}
         >
             <div className={styles["text"]}>{text}</div>

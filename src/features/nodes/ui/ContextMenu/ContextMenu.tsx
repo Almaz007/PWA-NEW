@@ -1,42 +1,42 @@
 // features/context-menu/ui/ContextMenu.tsx
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, memo } from "react";
+import styles from "./styles.module.css";
+import { TMenuAction } from "../../model/types";
+import cn from "classnames";
+import { NodeToolbar } from "@xyflow/react";
 
-export const ContextMenu = ({ actions }) => {
+interface Props {
+    actions: TMenuAction[];
+    visible: boolean;
+    setVisible: (visible: boolean) => void;
+}
+
+export const ContextMenu = memo(({ actions, visible, setVisible }: Props) => {
     const menuRef = useRef<HTMLDivElement>(null);
+    useEffect(() => {
+        const handleClickOutside = (e: MouseEvent) => {
+            console.log("click");
+            if (
+                menuRef.current &&
+                !menuRef.current.contains(e.target as Node)
+            ) {
+                setVisible(false);
+            }
+        };
 
-    // useEffect(() => {
-    //     const handleClickOutside = (e: MouseEvent) => {
-    //         if (
-    //             menuRef.current &&
-    //             !menuRef.current.contains(e.target as Node)
-    //         ) {
-    //             onClose();
-    //         }
-    //     };
-
-    //     document.addEventListener("mousedown", handleClickOutside);
-    //     return () =>
-    //         document.removeEventListener("mousedown", handleClickOutside);
-    // }, [onClose]);
-
-    // if (!position) return null;
+        document.addEventListener("click", handleClickOutside);
+        return () => document.removeEventListener("click", handleClickOutside);
+    }, []);
 
     return (
-        <div
-            ref={menuRef}
-            style={{
-                position: "absolute",
-                top: "-100%",
-                left: "0px",
-                background: "#fff",
-                width: "200px",
-                transform: "translateX(-50%)",
-                border: "1px solid #000",
-            }}
-        >
-            {actions.map((action, index) => (
-                <div key={index}>{action.element}</div>
-            ))}
-        </div>
+        <NodeToolbar isVisible={visible} ref={menuRef}>
+            <div className={styles["context-menu-block"]}>
+                {actions.map((action, index) => (
+                    <div key={index} className={styles["menu-item"]}>
+                        {action.element}
+                    </div>
+                ))}
+            </div>
+        </NodeToolbar>
     );
-};
+});

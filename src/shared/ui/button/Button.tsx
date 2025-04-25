@@ -1,15 +1,27 @@
-import React from "react";
+import { ButtonHTMLAttributes } from "react";
+import cn from "classnames";
+
 import styles from "./styles.module.css";
 
-interface Props {
-    onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
+type Props = {
     text: string;
-    type: "button" | "submit" | "reset";
-}
+} & ButtonProps;
 
-export const Button = ({ text, type = "button", ...props }: Props) => {
+export const Button = ({
+    text,
+    type = "button",
+    disabled,
+    ...props
+}: Props) => {
     return (
-        <button type={type} className={styles["btn"]} {...props}>
+        <button
+            type={type}
+            className={cn(styles["btn"], {
+                [styles["disabled"]]: disabled,
+            })}
+            {...props}
+        >
             {text}
         </button>
     );

@@ -1,5 +1,5 @@
-import { TColorsType } from "../model/types/types";
-import { TMarkerTypes } from "../model/types/types";
+import { TColorsType } from "../model/types/connection";
+import { TMarkerTypes } from "../model/types/connection";
 export const colorsByTypes: TColorsType = {
     bool: {
         clr: "#00ff00",

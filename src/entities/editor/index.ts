@@ -1,20 +1,25 @@
 import { editorSelector } from "./model/store/selectors";
 import { useEditorStore } from "./model/store/store";
-import { IPosition, TBuisnessComponents } from "./model/types/types";
+import { TBuisnessComponents } from "./model/types/node-config";
 import { nodeConfigurations } from "./config/nodeConfigurations";
 import { TNodeInstructionsTypes } from "./model/nodeInstructions";
-import { TNodeData } from "./model/types/types";
+import {
+    DefaultNodeData,
+    SetpointNodeData,
+    TNodeData,
+} from "./model/types/editor";
 import { NodeViews } from "./ui/views";
 import { colorsByTypes, markerTypes } from "./config/constants";
-import { generateNode } from "./utils/helpers/helpers";
-import { TDataType } from "./model/types/types";
-import { IBuisnessComponentProps } from "./model/types/types";
-import { TViewProps } from "./model/types/types";
+
+import { IBuisnessComponentProps } from "./model/types/node-config";
+import { TViewProps } from "./model/types/view";
 import { logicViews } from "./ui/views/logics";
-import { TViewComponents } from "./model/types/types";
+import { TViewConfig } from "./model/types/view";
 import { inputViews } from "./ui/views/inputs";
 import { comparisonsViews } from "./ui/views/comparisons";
 import { outputViews } from "./ui/views/outputs";
+import { algebraicViews } from "./ui/views/algebraic";
+import { timeExposuresViews } from "./ui/views/time-exposures";
 
 export {
     useEditorStore,
@@ -23,19 +28,20 @@ export {
     NodeViews,
     colorsByTypes,
     markerTypes,
-    generateNode,
     logicViews,
     inputViews,
     comparisonsViews,
     outputViews,
+    algebraicViews,
+    timeExposuresViews,
 };
 export type {
     IBuisnessComponentProps,
-    IPosition,
     TNodeInstructionsTypes,
     TNodeData,
     TBuisnessComponents,
-    TDataType,
     TViewProps,
-    TViewComponents,
+    TViewConfig,
+    DefaultNodeData,
+    SetpointNodeData,
 };

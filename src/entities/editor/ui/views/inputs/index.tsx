@@ -1,12 +1,12 @@
 import { AnalogInputIcon } from "./Icons/AnalogInputIcon";
 import { DiscreteInputIcon } from "./Icons/DiscreteInputIcon";
 import { InputViewStructure } from "./InputViewStruture/InputViewStructure";
-import { TViewComponents } from "@/entities/editor/model/types/types";
+import { TViewConfig } from "@/entities/editor/model/types/connection";
 
-export const inputViews: TViewComponents = {
+export const inputViews: TViewConfig = {
     discreteInput: {
         view: InputViewStructure,
-        width: 350,
+        width: 280,
         height: 50,
         text: "Дискретный вход",
         icon: <DiscreteInputIcon />,
@@ -15,10 +15,17 @@ export const inputViews: TViewComponents = {
 
     analogInput: {
         view: InputViewStructure,
-        width: 350,
+        width: 280,
         height: 50,
         text: "Аналоговый вход",
         icon: <AnalogInputIcon />,
         name: "Аналоговый вход",
+    },
+    constInt: {
+        view: InputViewStructure,
+        width: 280,
+        height: 50,
+        text: "Переменная",
+        name: "Значение переменной типа int",
     },
 };

@@ -1,8 +1,8 @@
 export const DiscreteOutputIcon = () => {
     return (
         <svg
-            width="44"
-            height="38"
+            width="35"
+            height="34"
             viewBox="0 0 44 38"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"

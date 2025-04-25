@@ -56,9 +56,9 @@ export const CustomEdge = ({
                     orient="auto-start-reverse"
                 >
                     <circle
-                        cx="5"
+                        cx="6"
                         cy="5"
-                        r="4"
+                        r="3"
                         fill={colorsByTypes["int"]?.clr}
                     />
                 </marker>

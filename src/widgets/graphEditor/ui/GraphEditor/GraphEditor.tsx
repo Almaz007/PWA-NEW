@@ -3,24 +3,28 @@ import {
     ReactFlowProvider,
     Background,
     Controls,
-    Panel,
 } from "@xyflow/react";
 import "@xyflow/react/dist/style.css";
-import { shallow } from "zustand/shallow";
 
-import { editorSelector, useEditorStore } from "@/entities/editor";
 import styles from "./styles.module.css";
 import { edgeTypes, nodeTypes, proOptions } from "../../config/constants";
 import { ConnectionLine } from "@/features/connectionLine";
-import { useDnd } from "@/features/dnd";
-import { LibNodes } from "@/features/libNodes";
-// import { ElementsPanel } from "@/features/nodes";
+import { GraphPanel } from "../GraphPanel/GraphPanel";
+import { SnackbarProvider } from "notistack";
+import { useGraphEditor } from "../../hooks/useGraphEditor";
 
 const GraphEditorContent = () => {
-    const { nodes, edges, onNodesChange, onEdgesChange, addEdge } =
-        useEditorStore(editorSelector, shallow);
-    console.log(nodes);
-    const { onDragOver, onDrop } = useDnd();
+    const {
+        nodes,
+        edges,
+        onNodesChange,
+        onEdgesChange,
+        addEdge,
+        onDragOver,
+        onDrop,
+        isValidConnection,
+        onConnectEnd,
+    } = useGraphEditor();
 
     return (
         <div className={styles["graph-editor"]}>
@@ -36,11 +40,11 @@ const GraphEditorContent = () => {
                 onDragOver={onDragOver}
                 onDrop={onDrop}
                 connectionLineComponent={ConnectionLine}
+                isValidConnection={isValidConnection}
+                onConnectEnd={onConnectEnd}
                 fitView
             >
-                <Panel position="top-center">
-                    <LibNodes />
-                </Panel>
+                <GraphPanel nodes={nodes} />
                 <Background />
                 <Controls />
             </ReactFlow>
@@ -51,7 +55,9 @@ const GraphEditorContent = () => {
 export const GraphEditor = () => {
     return (
         <ReactFlowProvider>
-            <GraphEditorContent />
+            <SnackbarProvider maxSnack={3}>
+                <GraphEditorContent />
+            </SnackbarProvider>
         </ReactFlowProvider>
     );
 };

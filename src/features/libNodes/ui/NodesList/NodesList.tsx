@@ -1,9 +1,9 @@
 import { ListItem } from "../ListItem/ListItem";
 import styles from "./styles.module.css";
-import { TViewComponents, TNodeInstructionsTypes } from "@/entities/editor";
+import { TViewConfig, TNodeInstructionsTypes } from "@/entities/editor";
 
 interface Props {
-    views: TViewComponents;
+    views: TViewConfig;
 }
 
 export const NodesList = ({ views }: Props) => {

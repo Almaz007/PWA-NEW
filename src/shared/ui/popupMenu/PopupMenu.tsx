@@ -7,9 +7,10 @@ import styles from "./styles.module.css";
 interface Props {
     text: string;
     children: React.ReactNode;
+    position: "left" | "center" | "right";
 }
 
-export const PopupMenu = ({ text, children }: Props) => {
+export const PopupMenu = ({ text, children, position }: Props) => {
     const [visible, setVisible] = useState<boolean>(false);
     const popupRef = useRef<HTMLDivElement>(null); // Явно указываем тип для ref
 
@@ -41,7 +42,7 @@ export const PopupMenu = ({ text, children }: Props) => {
         <div className={styles["popup"]} ref={popupRef}>
             <Button text={text} type="button" onClick={handleButtonClick} />
             <div
-                className={cn(styles["popup-content"], {
+                className={cn(styles["popup-content"], styles[position], {
                     [styles["visible"]]: visible,
                 })}
             >

@@ -1,7 +1,7 @@
-// features/context-menu/ui/ContextMenuFeature.tsx
 import { TNodeData } from "@/entities/editor";
-import { useNodeContextMenu } from "../../utils/hooks/useNodeContextMenu";
+import { useActionFactory } from "../../model/hooks/useActionFactory";
 import { ContextMenu } from "../ContextMenu/ContextMenu";
+import { useState } from "react";
 
 export const ContextMenuFeature = ({
     nodeId,
@@ -12,16 +12,23 @@ export const ContextMenuFeature = ({
     data: TNodeData;
     children: React.ReactNode;
 }) => {
-    const { actions } = useNodeContextMenu(nodeId, data);
+    const [visible, setVisible] = useState<boolean>(false);
+    const { actions } = useActionFactory(nodeId, data);
 
+    console.log(actions);
     return (
         <div
             style={{
                 position: "relative",
             }}
+            onDoubleClick={() => setVisible((prev) => !prev)}
         >
             {children}
-            <ContextMenu actions={actions} />
+            <ContextMenu
+                actions={actions}
+                visible={visible}
+                setVisible={setVisible}
+            />
         </div>
     );
 };

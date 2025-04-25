@@ -1,4 +1,4 @@
-import { EditorState } from "../types/types";
+import { EditorState } from "../types/editor";
 
 export const editorSelector = (state: EditorState) => ({
     nodes: state.nodes,
