@@ -6,7 +6,7 @@ export const useChangeHandles = (nodeId: string) => {
     const { updateNodeData, getEdges, setEdges } = useReactFlow();
     const updateNodeInternals = useUpdateNodeInternals();
 
-    const items = [...new Array(10)].reduce((acc, item, index) => {
+    const items = [...new Array(10)].reduce((acc, _, index) => {
         acc.push({ value: index + 1 });
         return acc;
     }, []);

@@ -1,7 +1,7 @@
 import { Position } from "@xyflow/react";
 import { CustomHandle } from "../CustomHandle/CustomHandle";
 import styles from "./styles.module.css";
-import { TDataType } from "@/entities/editor";
+import { TDataType } from "@/shared/types";
 import { useMemo } from "react";
 import { generateHandles } from "@/features/nodes/lib/utils/genereteHandles";
 

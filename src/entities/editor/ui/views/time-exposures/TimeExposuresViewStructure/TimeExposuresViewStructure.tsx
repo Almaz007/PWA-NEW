@@ -1,5 +1,5 @@
 import styles from "./styles.module.css";
-import { TViewProps } from "../../../../model/types/connection";
+import { TViewProps } from "@/entities/editor/model/types/view";
 
 export const TimeExposuresViewStructure = ({ width, height }: TViewProps) => {
     return (

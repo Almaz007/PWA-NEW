@@ -1,4 +1,4 @@
-import { applyNodeChanges, applyEdgeChanges, MarkerType } from "@xyflow/react";
+import { applyNodeChanges, applyEdgeChanges } from "@xyflow/react";
 import { createWithEqualityFn } from "zustand/traditional";
 import { EditorState } from "../types/editor";
 import { v4 as uuidv4 } from "uuid";

@@ -2,7 +2,6 @@
 import { useRef, useEffect, memo } from "react";
 import styles from "./styles.module.css";
 import { TMenuAction } from "../../model/types";
-import cn from "classnames";
 import { NodeToolbar } from "@xyflow/react";
 
 interface Props {
@@ -29,14 +28,16 @@ export const ContextMenu = memo(({ actions, visible, setVisible }: Props) => {
     }, []);
 
     return (
-        <NodeToolbar isVisible={visible} ref={menuRef}>
-            <div className={styles["context-menu-block"]}>
-                {actions.map((action, index) => (
-                    <div key={index} className={styles["menu-item"]}>
-                        {action.element}
-                    </div>
-                ))}
-            </div>
-        </NodeToolbar>
+        <div ref={menuRef}>
+            <NodeToolbar isVisible={visible}>
+                <div className={styles["context-menu-block"]}>
+                    {actions.map((action, index) => (
+                        <div key={index} className={styles["menu-item"]}>
+                            {action.element}
+                        </div>
+                    ))}
+                </div>
+            </NodeToolbar>
+        </div>
     );
 });

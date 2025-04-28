@@ -1,4 +1,5 @@
-import { colorsByTypes, TDataType } from "@/entities/editor";
+import { colorsByTypes } from "@/entities/editor";
+import { TDataType } from "@/shared/types";
 import { Position, Handle } from "@xyflow/react";
 import styles from "./styles.module.css";
 

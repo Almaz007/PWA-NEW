@@ -1,4 +1,4 @@
-import { TViewConfig } from "@/entities/editor/model/types/connection";
+import { TViewConfig } from "@/entities/editor/model/types/view";
 import { TimeExposuresViewStructure } from "./TimeExposuresViewStructure/TimeExposuresViewStructure";
 
 export const timeExposuresViews: TViewConfig = {

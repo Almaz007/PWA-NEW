@@ -44,8 +44,8 @@ export const actionFactories: Record<TActionName, ActionFactory> = {
         key: "updateSetpointValue",
         label: "Изменить значение",
         dependencies: ["updateSetpointValue"],
-        createElement: ({ nodeId, data, dependencies }) => {
-            const info = dependencies.updateSetpointValue?.(nodeId, data);
+        createElement: ({ data, dependencies }) => {
+            const info = dependencies.updateSetpointValue?.(data);
 
             if (!info) return null;
             const { handleChange, inputValue } = info;

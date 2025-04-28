@@ -9,6 +9,7 @@ export type TViewProps = {
     name?: string;
     inverse?: boolean;
 } & SVGAttributes<SVGElement>;
+
 export type TViewConfig = Partial<
     Record<
         TNodeInstructionsTypes,

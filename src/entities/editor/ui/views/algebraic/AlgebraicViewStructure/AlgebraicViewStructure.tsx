@@ -1,4 +1,4 @@
-import { TViewProps } from "@/entities/editor/model/types/connection";
+import { TViewProps } from "@/entities/editor/model/types/view";
 import styles from "./styles.module.css";
 
 export const AlgebraicViewStructure = ({ width, height, text }: TViewProps) => {

@@ -1,7 +1,7 @@
 import { AnalogInputIcon } from "./Icons/AnalogInputIcon";
 import { DiscreteInputIcon } from "./Icons/DiscreteInputIcon";
 import { InputViewStructure } from "./InputViewStruture/InputViewStructure";
-import { TViewConfig } from "@/entities/editor/model/types/connection";
+import { TViewConfig } from "@/entities/editor/model/types/view";
 
 export const inputViews: TViewConfig = {
     discreteInput: {

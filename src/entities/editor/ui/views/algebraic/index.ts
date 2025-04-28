@@ -1,4 +1,4 @@
-import { TViewConfig } from "@/entities/editor/model/types/connection";
+import { TViewConfig } from "@/entities/editor/model/types/view";
 import { AlgebraicViewStructure } from "./AlgebraicViewStructure/AlgebraicViewStructure";
 
 export const algebraicViews: TViewConfig = {

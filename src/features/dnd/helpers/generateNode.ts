@@ -20,6 +20,7 @@ const generateData = (config: TNodeData): TNodeData | null => {
         return {
             ...config,
             setpointOffset: offset,
+            resultOffset: undefined
         } satisfies SetpointNodeData;
     }
 

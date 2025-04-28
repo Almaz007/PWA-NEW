@@ -16,12 +16,12 @@ type BaseNodeData = {
     name?: string;
 };
 
-type DefaultNodeData = BaseNodeData & {
+export type DefaultNodeData = BaseNodeData & {
     resultOffset: number | null;
     setpointOffset?: never;
 };
 
-type SetpointNodeData = BaseNodeData & {
+export type SetpointNodeData = BaseNodeData & {
     setpointOffset: number | null;
     resultOffset?: never;
 };

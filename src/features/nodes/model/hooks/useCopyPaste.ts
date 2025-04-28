@@ -22,13 +22,8 @@ export function useCopyPaste() {
     const { getNodes, setNodes, getEdges, setEdges, screenToFlowPosition } =
         useReactFlow<Node<TNodeData>>();
 
-    // Set up the paste buffers to store the copied nodes and edges.
     const [bufferedNodes, setBufferedNodes] = useState([] as Node<TNodeData>[]);
     const [bufferedEdges, setBufferedEdges] = useState([] as Edge[]);
-
-    // initialize the copy/paste hook
-    // 1. remove native copy/paste/cut handlers
-    // 2. add mouse move handler to keep track of the current mouse position
 
     useEffect(() => {
         const events = ["cut", "copy", "paste"];
@@ -106,7 +101,7 @@ export function useCopyPaste() {
                 addSetpointOffset(node.data.dataType, node.data.setpointOffset);
             }
         });
-        // A cut action needs to remove the copied nodes and edges from the graph.
+
         const newNodes = getNodes().filter((node) => !node.selected);
 
         setNodes([...newNodes]);
@@ -130,7 +125,6 @@ export function useCopyPaste() {
                     ...bufferedNodes.map((s) => s.position.y)
                 );
 
-                // Генерируем новые узлы с обновленными offset
                 const newNodes: Node<TNodeData>[] = await Promise.all(
                     bufferedNodes.map(
                         async (node): Promise<Node<TNodeData>> => {

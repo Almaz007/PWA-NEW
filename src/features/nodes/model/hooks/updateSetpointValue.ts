@@ -1,6 +1,4 @@
 import {
-    combineBytesToFloat,
-    combineBytesToInt,
     splitFloatToBytes,
     splitIntToBytes,
 } from "../../lib/utils/convertBytes";
@@ -11,7 +9,7 @@ import { ChangeEvent, useState } from "react";
 import { useSetpoints } from "@/entities/setpoint";
 import { getValueByOfffset } from "../../lib/utils/geeValueByOffset";
 
-export const updateSetpointValue = (nodeId: string, data: TNodeData) => {
+export const updateSetpointValue = (data: TNodeData) => {
     const [inputValue, setInputValue] = useState<number | string>(() =>
         getValueByOfffset(data)
     );
@@ -52,7 +50,7 @@ export const updateSetpointValue = (nodeId: string, data: TNodeData) => {
             setSetpoints([...newSetpoints]);
         }
     };
-    const changeValueBool = (event: ChangeEvent<HTMLInputElement>) => {};
+    const changeValueBool = (_: ChangeEvent<HTMLInputElement>) => {};
 
     const func: Record<
         TDataType,

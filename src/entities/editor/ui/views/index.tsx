@@ -1,5 +1,5 @@
 import { inputViews } from "./inputs";
-import { TViewConfig } from "../../model/types/connection";
+import { TViewConfig } from "../../model/types/view";
 import { logicViews } from "./logics";
 import { comparisonsViews } from "./comparisons";
 import { outputViews } from "./outputs";

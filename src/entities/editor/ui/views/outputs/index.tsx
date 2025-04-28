@@ -1,6 +1,6 @@
 import { AnalogOutputIcon } from "./icons/AnalogOutputIcon";
 import { DiscreteOutputIcon } from "./icons/DiscreteOutputIcon";
-import { TViewConfig } from "@/entities/editor/model/types/connection";
+import { TViewConfig } from "@/entities/editor/model/types/view";
 import { OutputViewStructure } from "./OutputViewStruture/OutputViewStructure";
 
 export const outputViews: TViewConfig = {

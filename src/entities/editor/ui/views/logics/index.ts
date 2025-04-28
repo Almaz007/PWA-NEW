@@ -1,4 +1,4 @@
-import { TViewConfig } from "@/entities/editor/model/types/connection";
+import { TViewConfig } from "@/entities/editor/model/types/view";
 import { LogicViewStructure } from "./LogicViewStructure/LogicViewStructure";
 
 export const logicViews: TViewConfig = {

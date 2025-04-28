@@ -1,7 +1,7 @@
-import { TViewComponents } from "@/entities/editor/model/types/connection";
+import { TViewConfig } from "@/entities/editor/model/types/view";
 import { СomparisonViewStructure } from "./СomparisonViewStructure/СomparisonViewStructure";
 
-export const comparisonsViews: TViewComponents = {
+export const comparisonsViews: TViewConfig = {
     equalsInt: {
         view: СomparisonViewStructure,
         width: 100,

@@ -1,5 +1,5 @@
 import styles from "./styles.module.css";
-import { TViewProps } from "@/entities/editor/model/types/connection";
+import { TViewProps } from "@/entities/editor/model/types/view";
 
 export const InputViewStructure = ({
     width,

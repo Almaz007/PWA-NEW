@@ -1,4 +1,4 @@
-import { TViewProps } from "@/entities/editor/model/types/connection";
+import { TViewProps } from "@/entities/editor/model/types/view";
 import styles from "./styles.module.css";
 import cn from "classnames";
 
