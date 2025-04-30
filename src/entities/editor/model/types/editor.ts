@@ -8,24 +8,20 @@ import {
 } from "@xyflow/react";
 import { TNodeInstructionsTypes } from "../nodeInstructions";
 
-type BaseNodeData = {
+export type BaseNodeData = {
     dataType: TDataType;
     type: TNodeInstructionsTypes;
     inputHandlesCount: number;
     outputHandlesCount: number;
     name?: string;
-};
-
-export type DefaultNodeData = BaseNodeData & {
     resultOffset: number | null;
-    setpointOffset?: never;
 };
 
 export type SetpointNodeData = BaseNodeData & {
     setpointOffset: number | null;
-    resultOffset?: never;
 };
-export type TNodeData = SetpointNodeData | DefaultNodeData;
+
+export type TNodeData = SetpointNodeData | BaseNodeData;
 
 export interface EditorState {
     nodes: Node<TNodeData>[];

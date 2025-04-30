@@ -1,6 +1,83 @@
-export const nodeInstructions = {
-    discreteInput: {},
-    discreteOutput: {},
+export type TNodeInstructionsTypes =
+    | "discreteInput"
+    | "discreteOutput"
+    | "analogInput"
+    | "analogOutput"
+    | "dtrigger"
+    | "multInt"
+    | "subInt"
+    | "sumInt"
+    | "notOperation"
+    | "and"
+    | "nand"
+    | "nor"
+    | "or"
+    | "xor"
+    | "equalsInt"
+    | "equalsFloat"
+    | "moreInt"
+    | "moreFloat"
+    | "lessInt"
+    | "lessFloat"
+    | "constInt"
+    | "constBoolean"
+    | "timerInt";
+
+export type InstructionConfig = {
+    instruction: string[];
+    lengthInBytes: number;
+    in_type: number;
+};
+
+// Тип для нод-инструкций с динамичными числовыми ключами
+type NodeInstructionSet = Record<number, InstructionConfig>;
+
+// Основной тип для всех инструкций
+type TNodeInstructions = {
+    [key in TNodeInstructionsTypes]: NodeInstructionSet;
+};
+
+export const nodeInstructions: TNodeInstructions = {
+    discreteInput: {
+        0: {
+            instruction: [
+                "0x22",
+                "0x0C",
+                "0x83",
+                "0xC7",
+                "0x05",
+                "0x00",
+                "0x23",
+                "0x00",
+                "0xF5",
+                "0x00",
+                "0x82",
+                "0x80",
+            ],
+            lengthInBytes: 12,
+            in_type: 33,
+        },
+    },
+    discreteOutput: {
+        1: {
+            instruction: [
+                "0x22",
+                "0x0C",
+                "0x83",
+                "0xC7",
+                "0x05",
+                "0x00",
+                "0x23",
+                "0x00",
+                "0xF5",
+                "0x00",
+                "0x82",
+                "0x80",
+            ],
+            lengthInBytes: 12,
+            in_type: 30,
+        },
+    },
     analogInput: {},
     analogOutput: {},
     dtrigger: {},
@@ -1738,5 +1815,3 @@ export const nodeInstructions = {
         },
     },
 };
-
-export type TNodeInstructionsTypes = keyof typeof nodeInstructions;

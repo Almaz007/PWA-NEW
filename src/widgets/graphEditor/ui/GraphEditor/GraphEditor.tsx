@@ -13,6 +13,8 @@ import { GraphPanel } from "../GraphPanel/GraphPanel";
 import { SnackbarProvider } from "notistack";
 import { useGraphEditor } from "../../hooks/useGraphEditor";
 
+import { nodeInstructions } from "@/entities/editor";
+
 const GraphEditorContent = () => {
     const {
         nodes,

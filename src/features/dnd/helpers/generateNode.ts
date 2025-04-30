@@ -13,24 +13,24 @@ import { getSetpointOffset } from "@/entities/setpoint";
 import { enqueueSnackbar } from "notistack";
 
 const generateData = (config: TNodeData): TNodeData | null => {
+    const resultOffset = getOffset(config.dataType);
+
+    if (resultOffset === undefined) return null;
+
     if ("setpointOffset" in config) {
-        const offset = getSetpointOffset(config.dataType);
-        if (offset === undefined) return null;
+        const setpointOffset = getSetpointOffset(config.dataType);
+        if (setpointOffset === undefined) return null;
 
         return {
             ...config,
-            setpointOffset: offset,
-            resultOffset: undefined
-        } satisfies SetpointNodeData;
+            setpointOffset,
+            resultOffset,
+        };
     }
-
-    const offset = getOffset(config.dataType);
-    if (offset === undefined) return null;
-
     return {
         ...config,
-        resultOffset: offset,
-    } satisfies DefaultNodeData;
+        resultOffset,
+    };
 };
 
 export const generateNode = (

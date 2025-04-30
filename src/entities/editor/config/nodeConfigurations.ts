@@ -12,15 +12,16 @@ export const nodeConfigurations: TNodeConfigurations = {
     discreteOutput: {
         dataType: "bool",
         type: "discreteOutput",
-        inputHandlesCount: 0,
+        inputHandlesCount: 1,
         resultOffset: null,
-        outputHandlesCount: 1,
+        outputHandlesCount: 0,
         name: "",
     },
     analogInput: {
         dataType: "float",
         type: "analogInput",
         inputHandlesCount: 0,
+        resultOffset: null,
         setpointOffset: null,
         outputHandlesCount: 1,
         name: "",
@@ -28,9 +29,9 @@ export const nodeConfigurations: TNodeConfigurations = {
     analogOutput: {
         dataType: "float",
         type: "analogOutput",
-        inputHandlesCount: 0,
+        inputHandlesCount: 1,
         resultOffset: null,
-        outputHandlesCount: 1,
+        outputHandlesCount: 0,
         name: "",
     },
     xor: {
@@ -231,6 +232,7 @@ export const nodeConfigurations: TNodeConfigurations = {
         dataType: "int",
         type: "constInt",
         name: "c",
+        resultOffset: null,
         setpointOffset: null,
         inputHandlesCount: 0,
         outputHandlesCount: 1,

@@ -28,8 +28,8 @@ export const ContextMenu = memo(({ actions, visible, setVisible }: Props) => {
     }, []);
 
     return (
-        <div ref={menuRef}>
-            <NodeToolbar isVisible={visible}>
+        <div>
+            <NodeToolbar isVisible={visible} ref={menuRef}>
                 <div className={styles["context-menu-block"]}>
                     {actions.map((action, index) => (
                         <div key={index} className={styles["menu-item"]}>

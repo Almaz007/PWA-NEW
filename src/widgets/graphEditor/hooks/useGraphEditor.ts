@@ -10,6 +10,7 @@ import {
 import { useSnackbar } from "notistack";
 import { shallow } from "zustand/shallow";
 import { Edge } from "@xyflow/react";
+
 export const useGraphEditor = () => {
     const { nodes, edges, onNodesChange, onEdgesChange, addEdge } =
         useEditorStore(editorSelector, shallow);
